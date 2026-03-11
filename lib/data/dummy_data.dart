@@ -33,6 +33,6 @@ List<LoyaltyHistory> history = List.generate(
     date: "06 Jan, 2025",
     price: "125.32 JD",
     credits: 325,
-    image: "assets/food.jpg",
+    image: AppImagesPaths.history,
   ),
 );

@@ -24,32 +24,50 @@ class VenueCard extends StatelessWidget {
             ),
           ),
 
-          /// Blur Bottom Area
+          /// Blur Bottom Area - تدريجي
+          /// Progressive Blur
           Positioned(
             bottom: 0,
             left: 0,
             right: 0,
-            height: 80,
+            height: 70,
             child: ClipRRect(
-              child: BackdropFilter(
-                filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
-                child: Container(
-                  padding: const EdgeInsets.all(16),
-                  decoration: BoxDecoration(
-                    gradient: LinearGradient(
-                      begin: Alignment.topCenter,
-                      end: Alignment.bottomCenter,
-                      colors: [
-                        Colors.black.withOpacity(0.1),
-                        Colors.black.withOpacity(0.7),
-                      ],
+              borderRadius: const BorderRadius.vertical(
+                bottom: Radius.circular(20),
+              ),
+              child: Stack(
+                children: [
+
+                  /// blur layer
+                  BackdropFilter(
+                    filter: ImageFilter.blur(
+                      sigmaX: 12,
+                      sigmaY: 12,
+                    ),
+                    child: Container(
+                      color: Colors.transparent,
                     ),
                   ),
-                ),
+
+                  /// mask gradient (يعمل progressive)
+                  Container(
+                    decoration: const BoxDecoration(
+                      gradient: LinearGradient(
+                        begin: Alignment.topCenter,
+                        end: Alignment.bottomCenter,
+                        colors: [
+                          Color(0x00222222), // 0%
+                          Color(0x88222222), // ~54%
+                          Color(0xFF222222), // 100%
+                        ],
+                        stops: [0.0, 0.54, 1.0],
+                      ),
+                    ),
+                  ),
+                ],
               ),
             ),
           ),
-
           /// Text
           Positioned(
             bottom: 16,
@@ -57,19 +75,16 @@ class VenueCard extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-
                 AppTexts(
-                  data:venue.category,
+                  data: venue.category,
                   textColor: AppColors.white,
-
                 ).bodyBSS(),
 
                 const SizedBox(height: 2),
 
                 AppTexts(
-                  data:venue.name,
+                  data: venue.name,
                   textColor: AppColors.beigeDark,
-
                 ).bodyBM(),
               ],
             ),

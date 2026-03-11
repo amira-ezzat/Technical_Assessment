@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:technical_assessment/core/utils/app_icons.dart';
 import 'package:technical_assessment/core/utils/app_images.dart';
+import 'package:technical_assessment/presentation/screens/profile_screen.dart';
 
 import '../../core/styles/app_texts.dart';
 import '../../core/utils/app_colors.dart';
@@ -40,11 +41,21 @@ class LoyaltyCard extends StatelessWidget {
                   ).bodyBM(),
                 ],
               ),
-              ImageIcon(
-                AssetImage(AppIconPaths.user),
-                size: 19,
-                color: AppColors.white,
-              ),
+              IconButton(
+                  onPressed: (){
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const ProfileScreen(),
+                      ),
+                    );
+                  },
+                  icon:  ImageIcon(
+                    AssetImage(AppIconPaths.user),
+                    size: 19,
+                    color: AppColors.white,
+                  ),)
+
             ],
           ),
 
