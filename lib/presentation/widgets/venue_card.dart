@@ -88,7 +88,7 @@ class VenueCard extends StatelessWidget {
               ),
               child: const Icon(
                 Icons.arrow_forward_ios,
-                color: Colors.white,
+                color: AppColors.beigeDark,
                 size: 16,
               ),
             ),
