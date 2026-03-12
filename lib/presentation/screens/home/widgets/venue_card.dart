@@ -56,17 +56,20 @@ class VenueCard extends StatelessWidget {
           Positioned(
             bottom: 16,
             right: 16,
-            child: Container(
-              height: 38,
-              width: 38,
-              decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                border: Border.all(color: Colors.white54),
-              ),
-              child: const Icon(
-                Icons.arrow_forward_ios,
-                color: AppColors.beigeDark,
-                size: 16,
+            child: GestureDetector(
+              onTap: (){},
+              child: Container(
+                height: 38,
+                width: 38,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  border: Border.all(color: Colors.white54),
+                ),
+                child: const Icon(
+                  Icons.arrow_forward_ios,
+                  color: AppColors.beigeDark,
+                  size: 16,
+                ),
               ),
             ),
           ),
