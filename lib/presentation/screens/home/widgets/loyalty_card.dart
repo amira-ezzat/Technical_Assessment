@@ -147,30 +147,33 @@ class LoyaltyCard extends StatelessWidget {
                   );
                 }),
               ),
-              Container(
-                width: 67,
-                height: 18,
-                decoration: BoxDecoration(
-                  border: Border.all(
-                    color: Colors.white,
-                    width: 1,
-                  ),
-                  borderRadius: BorderRadius.circular(9),
-                ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    AppTexts(
-                      data: "More details",
-                      textColor: AppColors.white,
-                    ).bodyMSS(),
-                    SizedBox(width: 4),
-                    Icon(
-                      Icons.arrow_forward,
-                      color: AppColors.white,
-                      size: 10,
+              GestureDetector(
+              onTap: () {},
+                child: Container(
+                  width: 67,
+                  height: 18,
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                      color: Colors.white,
+                      width: 1,
                     ),
-                  ],
+                    borderRadius: BorderRadius.circular(9),
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      AppTexts(
+                        data: "More details",
+                        textColor: AppColors.white,
+                      ).bodyMSS(),
+                      SizedBox(width: 4),
+                      Icon(
+                        Icons.arrow_forward,
+                        color: AppColors.white,
+                        size: 10,
+                      ),
+                    ],
+                  ),
                 ),
               )
             ],

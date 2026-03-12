@@ -26,10 +26,14 @@ class ProfileScreen extends StatelessWidget {
         actions: [
           Padding(
             padding: const EdgeInsets.only(right: 16),
-            child: Icon(
-              Icons.settings_outlined,
-              size: 20,
-              color: AppColors.white.withOpacity(0.71),
+            child: IconButton(
+              onPressed: () {  },
+              icon:  Icon(
+                Icons.settings_outlined,
+                size: 20,
+                color: AppColors.white.withOpacity(0.71),
+              ),
+
             ),
           )
         ],

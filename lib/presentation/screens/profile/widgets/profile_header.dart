@@ -40,10 +40,13 @@ class ProfileHeader extends StatelessWidget {
           ),
         ),
 
-        AppTexts(
-          data: "Edit",
-          textColor: AppColors.beige100,
-        ).bodyB9(),
+        TextButton(
+          onPressed: () {  },
+          child: AppTexts(
+            data: "Edit",
+            textColor: AppColors.beige100,
+          ).bodyB9(),
+        ),
       ],
     );
   }

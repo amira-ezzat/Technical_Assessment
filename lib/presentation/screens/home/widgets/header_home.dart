@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import '../../../../core/styles/app_texts.dart';
 import '../../../../core/utils/app_colors.dart';
 import '../../../../core/utils/app_icons.dart';
+import '../../profile/home_screen/profile_screen.dart';
 
 class HeaderHome extends StatelessWidget {
   const HeaderHome({super.key});
@@ -32,21 +33,31 @@ class HeaderHome extends StatelessWidget {
         ),
       ],
     ),
-        Container(
-          decoration: BoxDecoration(
-            shape: BoxShape.circle,
-            border: Border.all(
-              color: AppColors.grey200,
-              width: 1.5,
+        GestureDetector(
+          onTap: () {
+            Navigator.pushReplacement(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const ProfileScreen(),
+              ),
+            );
+          },
+          child: Container(
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              border: Border.all(
+                color: AppColors.grey200,
+                width: 1.5,
+              ),
             ),
-          ),
-          child: CircleAvatar(
-            radius: 17.5,
-            backgroundColor: AppColors.grey300,
-            child: Image.asset(
-              AppIconPaths.user,
-              width: 19,
-              height: 19,
+            child: CircleAvatar(
+              radius: 17.5,
+              backgroundColor: AppColors.grey300,
+              child: Image.asset(
+                AppIconPaths.user,
+                width: 19,
+                height: 19,
+              ),
             ),
           ),
         ),
