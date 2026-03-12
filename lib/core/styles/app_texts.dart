@@ -86,13 +86,8 @@ class AppTexts {
     return _font(fontWeight: AppFonts.semiBold, fontSize: AppFonts.headingL);
   }
 
-  Text headingSBM() {
-    return _font(fontWeight: AppFonts.semiBold, fontSize: AppFonts.headingM);
-  }
 
-  Text headingSBS() {
-    return _font(fontWeight: AppFonts.semiBold, fontSize: AppFonts.headingS);
-  }
+
 
 
 
@@ -120,14 +115,16 @@ class AppTexts {
   }
 
   // Body SemiBold:
-  Text bodySBXL() {
-    return _font(fontWeight: AppFonts.semiBold, fontSize: AppFonts.bodyXL);
+  Text bodyB9() {
+    return _font(fontWeight: AppFonts.bold, fontSize: AppFonts.body9);
   }
 
   Text bodySBL() {
     return _font(fontWeight: AppFonts.semiBold, fontSize: AppFonts.bodyL);
   }
-
+  Text headingBSS() {
+    return _font(fontWeight: AppFonts.bold, fontSize: AppFonts.headingSS);
+  }
   Text bodySBM() {
     return _font(fontWeight: AppFonts.semiBold, fontSize: AppFonts.bodyM);
   }

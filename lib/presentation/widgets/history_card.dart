@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../core/styles/app_texts.dart';
 import '../../core/utils/app_colors.dart';
 import '../../model/loyalty_model.dart';
 
@@ -12,22 +13,22 @@ class HistoryCard extends StatelessWidget {
   Widget build(BuildContext context) {
 
     return Container(
-      margin: const EdgeInsets.only(bottom: 16),
-      padding: const EdgeInsets.all(12),
+      width: 67,
+      margin: const EdgeInsets.only(bottom: 8),
+      padding: const EdgeInsets.all(8),
 
       decoration: BoxDecoration(
-        color: Colors.grey[900],
-        borderRadius: BorderRadius.circular(20),
+        color: AppColors.grey400,
+        borderRadius: BorderRadius.circular(11),
       ),
 
       child:Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
 
-          /// Image
           Container(
-            width: 73,
-            height: 72,
+            width: 52,
+            height: 50,
             padding: const EdgeInsets.all(6),
             decoration: BoxDecoration(
               color: Colors.black,
@@ -37,8 +38,8 @@ class HistoryCard extends StatelessWidget {
               borderRadius: BorderRadius.circular(6),
               child: Image.asset(
                 history.image,
-                height: 3,
-                width: 5,
+                height: 30,
+                width: 34,
                 fit: BoxFit.cover,
               ),
             ),
@@ -59,23 +60,18 @@ class HistoryCard extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
-                        Text(
-                          history.restaurant,
-                          style: const TextStyle(
-                            color: Colors.white,
-                            fontSize: 16,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
+                        AppTexts(
+                         data:  history.restaurant,
+                          textColor: Colors.white,
+                        ).bodyBS(),
 
                         const SizedBox(height: 4),
 
-                        Text(
-                          history.date,
-                          style: const TextStyle(
-                            color: Colors.white54,
-                          ),
-                        ),
+                        AppTexts(
+                         data:  history.date,
+                          textColor: AppColors.white.withOpacity(0.34),
+
+                        ).bodyB9(),
                       ],
                     ),
                     Container(
@@ -92,13 +88,10 @@ class HistoryCard extends StatelessWidget {
                           ],
                         ),
                       ),
-                      child: Text(
-                        "${history.credits} Credits",
-                        style: const TextStyle(
-                          fontWeight: FontWeight.bold,
-                          color: Colors.black,
-                        ),
-                      ),
+                      child: AppTexts(
+                       data:  "${history.credits} Credits",
+                       textColor: AppColors.black
+                      ).bodyBS(),
                     ),
 
                   ],
@@ -110,11 +103,14 @@ class HistoryCard extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
 
-                    Text(
-                      "${history.price} • ${history.credits} Credits",
-                      style: const TextStyle(
-                        color: Colors.white70,
-                      ),
+                    ShaderMask(
+                      shaderCallback: (bounds) => const LinearGradient(
+                        colors: [AppColors.beigeDark, AppColors.beige100],
+                      ).createShader(bounds),
+                      child: AppTexts(
+                       data: "${history.price} • ${history.credits} Credits",
+
+                      ).bodyB9(),
                     ),
 
                     const Icon(

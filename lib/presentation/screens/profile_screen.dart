@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:technical_assessment/core/utils/app_colors.dart';
+import 'package:technical_assessment/core/utils/app_images.dart';
+import '../../core/styles/app_texts.dart';
 import '../../data/dummy_data.dart';
 import '../widgets/history_card.dart';
 
@@ -13,11 +16,15 @@ class ProfileScreen extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.black,
         elevation: 0,
-        title: const Text("Your Profile"),
-        actions: const [
+        title:  AppTexts(data: "Your Profile",
+          textColor: AppColors.white.withOpacity(0.75)
+        ).bodyBL(),
+        actions:  [
           Padding(
             padding: EdgeInsets.only(right: 16),
-            child: Icon(Icons.settings_outlined),
+            child: Icon(Icons.settings_outlined,size: 20,
+            color:  AppColors.white.withOpacity(0.71),
+            ),
           )
         ],
       ),
@@ -28,13 +35,13 @@ class ProfileScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
 
-            /// Profile Info
+            /// profile info
             Row(
               children: [
 
-                const CircleAvatar(
+                 CircleAvatar(
                   radius: 28,
-                  backgroundImage: AssetImage("assets/images/order1.png"),
+                  backgroundImage: AssetImage(AppImagesPaths.profile),
                 ),
 
                 const SizedBox(width: 12),
@@ -42,49 +49,38 @@ class ProfileScreen extends StatelessWidget {
                 Expanded(
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    children: const [
+                    children:  [
 
-                      Text(
-                        "Asmar Ajlouni",
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
+                      AppTexts(
+                       data:  "Asmar Ajlouni",
+                        textColor: AppColors.white,
+                      ).bodyBSS(),
 
                       SizedBox(height: 4),
 
-                      Text(
-                        "+962 234 567 2349",
-                        style: TextStyle(
-                          color: Colors.white54,
-                        ),
-                      ),
+                      AppTexts(
+                       data:  "+962 234 567 2349",
+                        textColor: AppColors.beigeDark
+                      ).bodyB9(),
                     ],
                   ),
                 ),
 
-                const Text(
-                  "Edit",
-                  style: TextStyle(
-                    color: Colors.white70,
-                  ),
-                )
+                 AppTexts(
+                  data: "Edit",
+                  textColor: AppColors.beige100
+                ).bodyB9()
               ],
             ),
 
             const SizedBox(height: 30),
 
-            /// Loyalty History title
-            const Text(
-              "Loyalty History",
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 18,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
+            /// loyalty history title
+             AppTexts(
+             data: "Loyalty History",
+              textColor: AppColors.white.withOpacity(0.82),
+
+            ).bodyBM(),
 
             const SizedBox(height: 16),
 

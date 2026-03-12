@@ -10,6 +10,8 @@ class AppImagesPaths {
   static const String order2 = "assets/images/order2.png";
   static const String order3 = "assets/images/order3.png";
   static const String history = "assets/images/history.png";
+  static const String profile = "assets/images/profile.png";
+
 
 
 }
