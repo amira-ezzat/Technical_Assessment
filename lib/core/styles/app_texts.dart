@@ -59,15 +59,7 @@ class AppTexts {
     );
   }
 
-  /// Heading Font Sizes:
-  // Heading Bold:
-  Text headingBXL() {
-    return _font(fontWeight: AppFonts.bold, fontSize: AppFonts.headingXL);
-  }
 
-  Text headingBL() {
-    return _font(fontWeight: AppFonts.bold, fontSize: AppFonts.headingL);
-  }
 
   Text headingBM() {
     return _font(fontWeight: AppFonts.bold, fontSize: AppFonts.headingM);
@@ -76,19 +68,6 @@ class AppTexts {
   Text headingBS() {
     return _font(fontWeight: AppFonts.bold, fontSize: AppFonts.headingS);
   }
-
-  // Heading SemiBold:
-  Text headingSBXL() {
-    return _font(fontWeight: AppFonts.semiBold, fontSize: AppFonts.headingXL);
-  }
-
-  Text headingSBL() {
-    return _font(fontWeight: AppFonts.semiBold, fontSize: AppFonts.headingL);
-  }
-
-
-
-
 
 
   /// Body Font Sizes:
@@ -166,61 +145,8 @@ class AppTexts {
   Text bodyRS() {
     return _font(fontWeight: AppFonts.regular, fontSize: AppFonts.bodyS);
   }
-
-  /// Button Font Sizes:
-  // Button Bold:
-  Text buttonBL() {
-    return _font(fontWeight: AppFonts.bold, fontSize: AppFonts.buttonL);
-  }
-
-  Text buttonBM() {
-    return _font(fontWeight: AppFonts.bold, fontSize: AppFonts.buttonM);
-  }
-
-  Text buttonBS() {
-    return _font(fontWeight: AppFonts.bold, fontSize: AppFonts.buttonS);
-  }
-
-  // Button SemiBold:
-  Text buttonSBL() {
-    return _font(fontWeight: AppFonts.semiBold, fontSize: AppFonts.buttonL);
-  }
-
-  Text buttonSBM() {
-    return _font(fontWeight: AppFonts.semiBold, fontSize: AppFonts.buttonM);
-  }
-
-  Text buttonSBS() {
-    return _font(fontWeight: AppFonts.semiBold, fontSize: AppFonts.buttonS);
-  }
-
-  // Button Medium:
-  Text buttonML() {
-    return _font(fontWeight: AppFonts.medium, fontSize: AppFonts.buttonL);
-  }
-
-  Text buttonMM() {
-    return _font(fontWeight: AppFonts.medium, fontSize: AppFonts.buttonM);
-  }
-
-  Text buttonMS() {
-    return _font(fontWeight: AppFonts.medium, fontSize: AppFonts.buttonS);
-  }
-
-  // Button Regular:
-  Text buttonRL() {
-    return _font(fontWeight: AppFonts.regular, fontSize: AppFonts.buttonL);
-  }
-
-  Text buttonRM() {
-    return _font(fontWeight: AppFonts.regular, fontSize: AppFonts.buttonM);
-  }
-
-  Text buttonRS() {
-    return _font(fontWeight: AppFonts.regular, fontSize: AppFonts.buttonS);
-  }
-
   Text bodyMSS() {
     return _font(fontWeight: AppFonts.medium, fontSize: AppFonts.bodySS);
   }
+
 }

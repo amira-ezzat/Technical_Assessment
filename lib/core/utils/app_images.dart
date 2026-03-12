@@ -12,6 +12,13 @@ class AppImagesPaths {
   static const String history = "assets/images/history.png";
   static const String profile = "assets/images/profile.png";
 
+  static const String blur_nobiko = "assets/images/blur_nobiko.png";
+  static const String blure_ceano = "assets/images/blure_ceano.png";
+  static const String blure_dovely = "assets/images/blure_dovely.png";
+  static const String blur_olivestree = "assets/images/blur_olivestree.png";
+
+
+
 
 
 }

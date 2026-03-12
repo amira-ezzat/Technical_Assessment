@@ -10,8 +10,6 @@ class AppFonts {
   static FontWeight regular = FontWeight.w400;
 
   /// Font Sizes
-  static double headingXL = 32;
-  static double headingL = 28;
   static double headingM = 24;
   static double headingS = 22;
   static double headingSS = 20;
@@ -23,7 +21,4 @@ class AppFonts {
   static double body9 = 9;
   static double bodySS = 7;
 
-  static double buttonL = 20;
-  static double buttonM = 16;
-  static double buttonS = 14;
 }

@@ -8,21 +8,29 @@ List<Venue> venues = [
     name: "Ceano",
     category: "Nikkei",
     image: AppImagesPaths.ceano,
+    blurImage: AppImagesPaths.blure_ceano,
+
   ),
   Venue(
     name: "Nobiko",
     category: "Restaurant",
     image: AppImagesPaths.nobiko,
+    blurImage: AppImagesPaths.nobiko,
+
   ),
   Venue(
     name: "Dovely",
     category: "Casual",
     image: AppImagesPaths.dovely,
+    blurImage: AppImagesPaths.blure_dovely,
+
   ),
   Venue(
     name: "Olivestree",
     category: "Bakery",
     image: AppImagesPaths.olivestree,
+    blurImage: AppImagesPaths.blur_olivestree,
+
   ),
 ];
 

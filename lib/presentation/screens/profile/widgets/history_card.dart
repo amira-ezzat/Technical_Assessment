@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import '../../core/styles/app_texts.dart';
-import '../../core/utils/app_colors.dart';
-import '../../model/loyalty_model.dart';
+import '../../../../core/styles/app_texts.dart';
+import '../../../../core/utils/app_colors.dart';
+import '../../../../model/loyalty_model.dart';
 
 class HistoryCard extends StatelessWidget {
 
